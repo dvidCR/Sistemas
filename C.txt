@@ -1,0 +1,156 @@
+-- Ej8
+
+SELECT UPPER(CONCAT(nombre, ' ', apellido1, ' ', apellido2)) AS nombre_completo_mayus FROM empleado;
+
+-- Ej9
+
+SELECT LOWER(CONCAT(nombre, ' ', apellido1, ' ', apellido2)) AS nombre_completo_minus FROM empleado;
+
+-- Ej10
+
+SELECT id_empleado, SUBSTRING(nif, 1, 8) AS digitos_nif, SUBSTRING(nif, 9, 1) AS letra_nif FROM empleado;
+
+-- Ej11
+
+SELECT nombre_departamento, presupuesto - gastos AS presupuesto_actual
+FROM departamento;
+
+-- Ej12
+
+SELECT nombre_departamento, presupuesto - gastos AS presupuesto_actual
+FROM departamento
+ORDER BY presupuesto_actual ASC;
+
+-- Ej13
+
+SELECT nombre_departamento FROM departamento
+ORDER BY nombre_departamento ASC;
+
+-- Ej14
+
+SELECT nombre_departamento FROM departamento
+ORDER BY nombre_departamento DESC;
+
+-- Ej15
+
+SELECT nombre_departamento, presupuesto
+FROM departamento
+ORDER BY presupuesto DESC
+LIMIT 3;
+
+-- Ej16
+
+SELECT nombre_departamento, presupuesto
+FROM departamento
+ORDER BY presupuesto ASC
+LIMIT 3;
+
+-- Ej17
+
+SELECT nombre_departamento, gastos
+FROM departamento
+ORDER BY gastos DESC
+LIMIT 2;
+
+-- Ej18
+
+SELECT nombre_departamento, gastos
+FROM departamento
+ORDER BY gastos ASC
+LIMIT 2;
+
+-- Ej19
+
+SELECT * FROM empleado
+LIMIT 2 OFFSET 2;
+
+-- Ej20
+
+SELECT nombre_departamento, presupuesto
+FROM departamento
+WHERE presupuesto >= 150000;
+
+-- Ej21
+
+SELECT nombre_departamento, gastos
+FROM departamento
+WHERE gastos < 5000;
+
+-- Ej22
+
+SELECT nombre_departamento, presupuesto
+FROM departamento
+WHERE presupuesto > 100000 AND presupuesto < 200000;
+
+-- Ej23
+
+SELECT nombre_departamento
+FROM departamento
+WHERE NOT (presupuesto >= 100000 AND presupuesto <= 200000);
+
+-- Ej24
+
+SELECT nombre_departamento
+FROM departamento
+WHERE presupuesto BETWEEN 100000 AND 200000;
+
+-- Ej25
+
+SELECT nombre_departamento
+FROM departamento
+WHERE NOT (presupuesto BETWEEN 100000 AND 200000);
+
+-- Ej26
+
+SELECT nombre_departamento, gastos, presupuesto
+FROM departamento
+WHERE gastos > presupuesto;
+
+-- Ej27
+
+SELECT nombre_departamento, gastos, presupuesto
+FROM departamento
+WHERE gastos < presupuesto;
+
+-- Ej28
+
+SELECT nombre_departamento, gastos, presupuesto
+FROM departamento
+WHERE gastos = presupuesto;
+
+-- Ej29
+
+SELECT * FROM empleado
+WHERE apellido2 IS NULL;
+
+-- Ej30
+
+SELECT * FROM empleado
+WHERE apellido2 IS NOT NULL;
+
+-- Ej31
+
+SELECT * FROM empleado
+WHERE apellido2 = 'López';
+
+-- Ej32
+
+SELECT * FROM empleado
+WHERE apellido2 IN ('Díaz', 'Moreno');
+
+-- Ej33
+
+SELECT * FROM empleado
+WHERE apellido2 = 'Díaz' OR apellido2 = 'Moreno';
+
+-- Ej34
+
+SELECT nombre, apellido1, nif
+FROM empleado
+WHERE id_departamento = 3;
+
+-- Ej35
+
+SELECT nombre, apellido1, nif
+FROM empleado
+WHERE id_departamento IN (2, 4, 5);

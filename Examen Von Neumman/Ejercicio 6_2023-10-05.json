@@ -1,0 +1,1 @@
+{"title":"Ejercicio 6","created":"2023-10-05","codeLine":-1,"step":9,"status":0,"alu":{"e1":9,"e2":3,"op":"="},"acc":3,"pc":{"val":0,"step":1},"ir":{"cmd":"HLT","loc":""},"focus":{"el":"","cell":-1,"var":-1},"variables":{"X":"4","Y":"3","Z":"2","W":"0","T1":"0"},"line":"HLT","code":"LOD x\nADD y\nADD z\nDIV #3\nSTO w\nHLT"}
