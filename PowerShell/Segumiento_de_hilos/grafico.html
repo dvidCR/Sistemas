@@ -1,0 +1,25 @@
+<head>
+  <script src="https://www.gstatic.com/charts/loader.js"></script>
+  <script>
+    google.charts.load('current', {packages: ['corechart']});
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+      // Define the chart to be drawn.
+      var data = new google.visualization.DataTable();
+      data.addColumn('string', 'Proceso');
+      data.addColumn('number', 'Consumo CPU en segundos');
+      data.addRows([['WUDFHost', 0],['WUDFHost', 0],['WUDFHost', 0],['winlogon', 0],['wininit', 0],['vmware-usbarbitrator64', 0],['vmware-authd', 0],['vmnetdhcp', 0],['vmnat', 0],['UserOOBEBroker', 0.109375],['TrustedInstaller', 0],['TiWorker', 0],['TextInputHost', 1.625],['taskhostw', 1.109375],['taskhostw', 1.640625],['TabTip', 0.984375],['SystemSettings', 1.203125],['System', 0],['SwUSB', 0],['svchost', 0],['svchost', 0],['svchost', 0],['svchost', 0],['svchost', 0],['svchost', 0],['svchost', 0],['svchost', 0],['svchost', 0],['svchost', 0],['svchost', 0],['svchost', 0],['svchost', 0],['svchost', 0],['svchost', 0],['svchost', 0],['svchost', 0],['svchost', 0],['svchost', 0],['svchost', 0],['svchost', 0],['svchost', 0],['svchost', 0],['svchost', 0.703125],['svchost', 0],['svchost', 0],['svchost', 0],['svchost', 0],['svchost', 0],['svchost', 0],['svchost', 0],['svchost', 0],['svchost', 0],['svchost', 0],['svchost', 0],['svchost', 0],['svchost', 0],['svchost', 0],['svchost', 0],['svchost', 0],['svchost', 0],['svchost', 0],['svchost', 0],['svchost', 0],['svchost', 1.578125],['svchost', 0],['svchost', 0],['svchost', 0],['svchost', 0],['svchost', 0],['svchost', 0],['svchost', 0],['svchost', 0],['svchost', 0],['svchost', 0],['svchost', 0],['svchost', 0],['svchost', 0],['svchost', 2.25],['svchost', 2.859375],['svchost', 0],['svchost', 0],['svchost', 0],['svchost', 0],['svchost', 0],['svchost', 0],['svchost', 0],['svchost', 0],['svchost', 0],['svchost', 0],['svchost', 0],['svchost', 0],['svchost', 0],['svchost', 0],['svchost', 0],['svchost', 0],['svchost', 0],['svchost', 0],['svchost', 0],['svchost', 0],['svchost', 0],['svchost', 0],['svchost', 0],['svchost', 0],['svchost', 0],['svchost', 0],['StartMenuExperienceHost', 2.8125],['sqlwriter', 0],['spoolsv', 0],['spacedeskServiceTray', 0.078125],['spacedeskService', 0],['smss', 0],['sihost', 5.96875],['ShellExperienceHost', 6.671875],['SgrmBroker', 0],['services', 0],['SecurityHealthSystray', 0.0625],['SecurityHealthService', 0],['SearchIndexer', 0],['SearchApp', 21.09375],['RuntimeBroker', 3.65625],['RuntimeBroker', 2.75],['RuntimeBroker', 2.59375],['RuntimeBroker', 0.28125],['RuntimeBroker', 0.140625],['RuntimeBroker', 3.171875],['RuntimeBroker', 0.078125],['RuntimeBroker', 0.171875],['runSW', 0],['rundll32', 0.0625],['Registry', 0],['PresentationFontCache', 0],['powershell_ise', 117.46875],['PhoneExperienceHost', 3.734375],['openvpnserv2', 0],['openvpnserv', 0],['OfficeClickToRun', 0],['nvxdsync', 0],['NVDisplay.Container', 0],['NisSrv', 0],['ms-teams', 12.234375],['MsMpEng', 0],['msedgewebview2', 0.546875],['msedgewebview2', 134.953125],['msedgewebview2', 12.546875],['msedgewebview2', 0.046875],['msedgewebview2', 81.21875],['msedgewebview2', 120.609375],['msedgewebview2', 318.234375],['msedgewebview2', 0.75],['MoUsoCoreWorker', 0],['mongod', 0],['Microsoft.SharePoint', 0.796875],['Memory Compression', 0],['lsass', 0],['LockApp', 1.109375],['igfxTray', 0.4375],['igfxHK', 0.1875],['igfxEM', 0.328125],['igfxCUIService', 0],['Idle', 0],['HxTsr', 0.65625],['HxOutlook', 1.359375],['HxAccounts', 0.546875],['GoogleCrashHandler64', 0],['GoogleCrashHandler', 0],['gamingservicesnet', 0],['gamingservices', 0],['fontdrvhost', 0],['fontdrvhost', 0],['explorer', 58.640625],['ETDService', 0],['ETDCtrlHelper', 0.09375],['ETDCtrl', 0.625],['ESystemRemoteService', 0],['EShare', 1651.1875],['EDesktop', 0],['dwm', 0],['dllhost', 0.265625],['dllhost', 0.09375],['dllhost', 0],['dasHost', 0],['dasHost', 0],['CxAudMsg64', 0],['ctfmon', 13.140625],['csrss', 0],['csrss', 0],['chrome', 36.75],['chrome', 20.796875],['chrome', 1.71875],['chrome', 51.90625],['chrome', 0.078125],['chrome', 7.59375],['chrome', 103.53125],['chrome', 13.3125],['chrome', 129.578125],['chrome', 4.171875],['chrome', 19.953125],['chrome', 2.65625],['chrome', 4.328125],['chrome', 0.140625],['chrome', 0.484375],['chrome', 15.65625],['chrome', 10.078125],['chrome', 0.625],['chrome', 1.046875],['chrome', 0.09375],['chrome', 24.375],['chrome', 36.0625],['CAudioFilterAgent64', 0.265625],['BtwRSupportService', 0],['ApplicationFrameHost', 0.328125],['AggregatorHost', 0]]);
+
+      var options = {'title':'La cantidad de tiempo de procesador que el proceso ha utilizado en todos los procesadores, en segundos','width':1200,'height':2000};
+
+		// Instantiate and draw the chart.
+		var chart = new google.visualization.BarChart(document.getElementById('myPieChart'));
+		chart.draw(data, options);
+		}
+		</script>
+</head>
+<body>
+<!-- Identify where the chart should be drawn. -->
+<div id="myPieChart"></div>
+</body>
